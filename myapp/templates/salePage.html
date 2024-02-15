@@ -1,0 +1,77 @@
+{% extends "search-base.html" %}
+{% load static %}
+
+{% block content %}
+     <!-- 商品 -->
+<div class="container">
+   <hr>
+   <div class="Inner-container">
+         <div class="left">
+            {% comment %} <img src={{圖片}}:{{pic}} alt={{title}}:{{title}}> {% endcomment %}
+         </div>
+         <div class="right">
+            <ul>
+               {% comment %}<li class="subtitle is-5">{{title}}:{{title}}</li>{% endcomment %}
+               {% comment %}<li class="subtitle is-5">NT$+{{價錢}}:{{price}}</li>{% endcomment %}
+               <nav class="level">
+                     <div class="level-left">
+                        <li class="subtitle is-5">商品編號: 8524309</li>
+                     </div>
+                     <div class="level-right">
+                        <form method="POST">
+                           <input type="hidden" name="product_id" value="8524309">
+                           <input type="submit" name="add_to_cart" value="追蹤" onclick="if (confirm('是否追蹤商品？')) { action = './login.html'; } else { alert('取消'); }">
+                        </form>
+                     </div>
+               </nav>
+               <hr class="line">
+               <li class="subtitle is-5">Product content</li>
+
+            </ul>
+         </div>
+   </div>
+<!-- 比價 -->
+   <div class="big-frame">
+<!-- 圖片 -->
+      <div class="left-frame">
+         <div class="image-box">
+            {% comment %} <img src={{圖片}}:{{pic}} alt={{title}}:{{title}}> {% endcomment %}
+         </div>
+      </div>
+      <div class="right-frame">
+<!-- 標題 -->
+            <div><a href={{連結}}:{{lick}}><h1>{{title}}:{{title}}</h1></a></div>
+         <div class="parity-item">
+            <div class="box-item" ><a href="../templates/salePage.html">
+<!-- CF LOGO -->
+                  <div class="item-img">
+                     <img src="{% static 'images/cf-logo.png' %}">
+                  </div>
+<!-- 價格 -->
+                   {% comment %} <div class="item-price" ><p>NT$+{{價錢}}:{{price}}</p></div> {% endcomment %} 
+               </a>
+            </div>
+            <div class="box-item" ><a href="../templates/salePage.html">
+<!-- pchome LOGO -->
+                  <div class="item-img">
+                     <img src="{% static 'images/pchome-logo.png' %}">
+                  </div>
+<!-- 價格 -->
+                  {% comment %}<div class="item-price"><p>NT$+{{價錢}}:{{price}}</p></div>{% endcomment %}
+               </a>
+            </div>
+            <div class="box-item" ><a href="../templates/salePage.html">
+<!-- momo LOGO -->
+                  <div class="item-img">
+                     <img src="{% static 'images/momo-logo.png' %}">
+                  </div>
+<!-- 價格 -->
+                  {% comment %}<div class="item-price"><p>NT$+{{價錢}}:{{price}}</p></div>{% endcomment %}
+               </a>
+            </div>
+         </div>
+      </div>
+   </div>
+            {% comment %} {%endfor%} {% endcomment %}
+
+{% endblock %}

@@ -1,0 +1,25 @@
+/* 比價商品 */
+.{
+        width: 300px;
+        border: 15px solid green;
+        padding: 50px;
+        margin: 20px;
+}
+.product-title {
+    font-size: 18px;
+    color: black;
+}
+
+/* 價格標籤 */
+.price-tag {
+    display: inline-block;
+    background-color: pink; /* 根據需要調整顏色 */
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px; 
+}
+
+/* 商店名稱 */
+.store-name {
+    color: red; /* 根據需要調整顏色 */
+}
