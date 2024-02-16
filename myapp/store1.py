@@ -42,9 +42,11 @@ class store():
 
         # print(sorted_results_df)
 
+        # sorted_results_df.to_csv(f"{product}.csv",encoding='utf-8-sig')
+
         return sorted_results_df
         
-        # sorted_results_df.to_csv(f"{product}.csv",encoding='utf-8-sig')
+        
  
        
     def Carrefour(self,product,results):

@@ -41,7 +41,7 @@
       <link rel="stylesheet" href="{% static 'css/member.css' %}">
       <link rel="stylesheet" href="{% static 'css/style.css' %}">
       <link rel="stylesheet" href="{% static 'css/parity.css' %}">
-      <link rel="stylesheet" href="{% static 'css/member.css' %}">
+
    </head>
    <body>
       <!-- banner bg main start -->
@@ -69,11 +69,11 @@
                         <!-- header section end -->
                         <ul>
                            <li><a href="../../"><img src="{% static 'images/logo-ch2.png' %}"></a></li>
-                           <li><a href="../../myapp/ex_fashion">3C產品</a></li>
-                           <li><a href="../../myapp/ex_fashion">衣服服飾</a></li>
-                           <li><a href="../../myapp/ex_fashion">生活用品</a></li>
-                           <li><a href="../../myapp/ex_fashion">寵物用品</a></li>
-                           <li><a href="../../myapp/ex_fashion">文具用品</a></li>
+                           <li><a href="../../myapp/ex_fashion_3C">3C產品</a></li>
+                           <li><a href="../../myapp/ex_fashion_clothing">衣服服飾</a></li>
+                           <li><a href="../../myapp/ex_fashion_daily">生活用品</a></li>
+                           <li><a href="../../myapp/ex_fashion_pet">寵物用品</a></li>
+                           <li><a href="../../myapp/ex_fashion_Stationery">文具用品</a></li>
                            <div class="login_menu">
                               <ul>
                                  {% if user.is_authenticated %}
@@ -97,7 +97,7 @@
                            </div>
                         </ul>
                      </div>
-                     {% comment %} <form action="myapp/search/" method="get"> {% endcomment %}
+                     <form action="myapp/search/" method="get">
                         <div class="main">
                            <!-- Another variation with a button -->
                               <div class="input-group">
@@ -113,16 +113,17 @@
                                  
                                  <input type="text" id="product" name="product" class="form-control" placeholder="搜尋" onkeydown="handleKeyPress(event)">
                                  <div class="input-group-append">
-                                    <button class="btn btn-secondary" type="button" style="background-color: #f26522; border-color:#f26522 " onclick="alert('搜尋中，請稍後~');"></onclick>
+                                    <button class="btn btn-secondary" type="submit" style="background-color: #f26522; border-color:#f26522 " onclick="alert('搜尋中，請稍後~');"></onclick>
                                     <i class="fa fa-search"></i>
                                     </input>
                                  </div>
                               </div>
-                           </div>
-                        {% comment %} </form> {% endcomment %}
                         </div>
+                     </form>
+                        
                   </div>
                </div>
+            </div>
          </div>
          <!-- header top section start -->
          

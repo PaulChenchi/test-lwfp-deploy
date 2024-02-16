@@ -29,12 +29,16 @@ urlpatterns = [
     # path('base/', views.base, name = 'base'), #模板
     path("register/", views.register, name="register"), #註冊
     path("register/add/", views.regadd, name="regadd"), #註冊成功
-    path("accounts/login/", views.login, name="login"), #登入
-    path("accounts/logout/", views.logout, name="logout"), #登出
-    path('ex_fashion/', views.ex_fashion, name="ex_fashion"),
+    path("login/", views.login, name="login"), #登入
+    path("logout/", views.logout, name="logout"), #登出
+    path('ex_fashion_3C/', views.ex_fashion_3C, name="ex_fashion_3C"),
+    path('ex_fashion_colthing/', views.ex_fashion_colthing, name="ex_fashion_colthing"),
+    path('ex_fashion_pet/', views.ex_fashion_pet, name="ex_fashion_pet"),
+    path('ex_fashion_Srationery/', views.ex_fashion_Srationery, name="ex_fashion_Srationery"),
+    path('ex_fashion_daily/', views.ex_fashion_daily, name="ex_fashion_daily"),
     path('search/', views.search, name="search"), #搜尋
     # path('index/', views.index, name="index"), 
-    path('accounts/profile/', views.ex_index, name = 'ex_index'),
+    
 
 ]
 # urlpatterns += staticfiles_urlpatterns()

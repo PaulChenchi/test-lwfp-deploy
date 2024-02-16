@@ -76,8 +76,29 @@ def ex_index(request):
 def base(request):
     return render(request, "search-base.html")
 
-def ex_fashion(request):
-    return render(request, "ex_fashion.html")
+def ex_fashion_3C(request):
+    product='3C'
+    results=dataCrawl(product)
+    return render(request, "search.html", {'product':product,'results': results})
+
+def ex_fashion_colthing(request):
+    product='外套'
+    results=dataCrawl(product)
+    return render(request, "search.html", {'product':product,'results': results})
+
+def ex_fashion_pet(request):
+    product='飼料'
+    results=dataCrawl(product)
+    return render(request, "search.html", {'product':product,'results': results})
+
+def ex_fashion_Srationery(request):
+    product='筆'
+    results=dataCrawl(product)
+    return render(request, "search.html", {'product':product,'results': results})
+def ex_fashion_daily(request):
+    product='冰箱'
+    results=dataCrawl(product)
+    return render(request, "search.html", {'product':product,'results': results})
 
 #首頁(測試)
 def index(request):
@@ -134,7 +155,7 @@ def login(request):
 
         print(user)
 
-    return render(request, "user/login.html", {"message": message})
+    return render(request, "login.html", {"message": message})
 
 # def logout(request):
 #     auth.logout(request)
@@ -184,4 +205,4 @@ def regadd(request):
     if username == checkname :
         return HttpResponse("註冊成功")
     else:
-        return redirect("../../register")
+        return redirect("register.html")
