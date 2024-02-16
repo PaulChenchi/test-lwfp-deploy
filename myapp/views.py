@@ -162,7 +162,7 @@ def login(request):
 #     return HttpResponseRedirect('../../../')
 def user_logout(request):
     logout(request)
-    return redirect("../../../")
+    return redirect(request,"ex_index.html")
 
 def register(request):
     message = ""
@@ -171,6 +171,7 @@ def register(request):
         username = request.POST["username"]
         password1 = request.POST["password1"]
         password2 = request.POST["password2"]
+        email=request.POST["email"]
 
         print(username, password1, password2)
         if password1 != password2:
@@ -182,7 +183,8 @@ def register(request):
                 message = "帳號重複"
             else:
                 user = User.objects.create_user(username=username,
-                                                password=password1)
+                                                password=password1,
+                                                email=email)
                 user.save()
                 message = "註冊成功"
 
