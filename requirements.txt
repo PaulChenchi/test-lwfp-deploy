@@ -1,6 +1,5 @@
 django
 pandas
-json
 bs4
 re
 selenium
