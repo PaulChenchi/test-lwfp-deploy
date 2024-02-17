@@ -1,6 +1,5 @@
 django
 pandas
-threading
 json
 bs4
 re
